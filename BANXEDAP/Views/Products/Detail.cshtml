@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="body-product" style="margin:60px 200px;height:366px">
+    <figure class="product">
+        <div class="product-hero">
+            <img src="@ViewBag.Product.Image" alt="white amber mist" class="product-image">
+        </div>
+        <div class="product-content">
+            <div class="product-title">
+                <h1 class="product-heading">@ViewBag.Product.Name</h1>
+                <div class="product-tag">
+                    <p class="product-tag-2">#xethethao</p>
+                    <p class="product-tag-2">#hot</p>
+                </div>
+            </div>
+            <p class="product-description">Loại sản phẩm : @ViewBag.dep.Name </p>
+            <p class="product-description">@ViewBag.Product.Detail</p>
+            <p class="product-description"> Giá :@ViewBag.Product.Price VND </p>
+                <div class="product-details">
+                    <a href="/Employee/Error" class="btn btn-primary"><span class="emoji">🛍</span>Add to Cart</a>
+                </div>
+        </div>
+    </figure>
+</div>
+
+
+

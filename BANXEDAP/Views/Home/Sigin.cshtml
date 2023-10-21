@@ -1,0 +1,86 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-image: url('background-image.jpg'); /* Đường dẫn đến hình nền */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        form{
+            margin-left:10px;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.8); /* Màu nền với độ mờ */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding-left:5px;
+        }
+        h2{
+            text-align:center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #3742fa;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            width:140px;
+        }
+
+            button:hover {
+                background-color: #0652DD;
+            }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+            /* Ẩn gạch dưới của liên kết khi di chuột qua */
+            a:hover {
+                text-decoration: none;
+            }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Đăng nhập</h2>
+        <form action="/login" method="post">
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Nhập Email" name="email" required>
+
+            <label for="psw"><b>Mật khẩu</b></label>
+            <input type="password" placeholder="Nhập Mật khẩu" name="psw" required>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Ghi nhớ tôi
+            </label>
+            <br />
+            <div class="loginn">
+                <button type="submit">Đăng nhập</button> <button type="button"><a href="/home/signup">Đăng kí</a></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,606 @@
+﻿
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xe đạp cao cấp</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+          rel="stylesheet" />
+    <script type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <style>
+        .right-section {
+            margin-left: 10px; /* 400px + 20px margin */
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .footer dropdown-menu {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-left {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .nav-item :hover {
+            background-color: blue;
+            color: aliceblue;
+        }
+
+        .dropdown-item:hover {
+            margin-top: -5px background-color: blue;
+            color: aliceblue;
+        }
+        /* Custom CSS for modifying spacing */
+        .navbar {
+            position: fixed; /* Làm cho navbar cố định */
+            top: 0; /* Đặt navbar ở đầu trang web */
+            z-index: 1000;
+        }
+        .navbar-nav .nav-link {
+            margin-right: 5px;
+        }
+
+        .navbar-nav {
+            margin-left: 20px
+        }
+
+        .dropdown-menu .dropdown-item {
+            padding: 5px;
+        }
+
+        .news-card {
+            margin-bottom: 5px;
+        }
+
+        .right-section {
+            padding: 5px;
+        }
+
+        .card {
+            margin-bottom: 5px;
+            transition: box-shadow 0.3s;
+        }
+
+
+            .card:hover {
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+                transform: translateY(-5px);
+                background-color: azure;
+            }
+
+        .footer-left p,
+        .footer-right p {
+            margin-bottom: 5px;
+        }
+
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 360px;
+            margin-top: 50px
+        }
+
+        .list-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 10px 50px;
+            width: 1299px;
+            background: rgba( 255, 255, 255, 0.7 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 6px );
+            -webkit-backdrop-filter: blur( 6px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+
+        .card1 {
+            height: 350px;
+            margin: 12px;
+            width: 268px;
+            background-color: #ffffff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease; /* Sử dụng hiệu ứng chuyển đổi */
+            /* Hiệu ứng hover */
+            &:hover
+
+        {
+            background-color: #f7f1e3;
+            transform: scale(1.05); /* Phóng to thẻ khi hover qua */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Tăng độ đục của box-shadow */
+        }
+
+        }
+
+
+
+        .card-img-top1 {
+            height: 200px;
+            width: 268px;
+        }
+
+        .card-body1 {
+            height: 100px;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn a {
+            color: black;
+        }
+
+        .btn {
+            margin: 0px 86px;
+            background-color: #45aaf2;
+        }
+
+            .btn:hover {
+                color: black;
+                background-color: #3867d6;
+            }
+
+        .list-title {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        input,
+        button,
+        textarea,
+        select {
+            outline: none;
+            font-size: 15px;
+            line-height: 1.5;
+            font-family: "Poppins", sans-serif;
+        }
+
+        input {
+            line-height: normal;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .image-slider {
+            padding-bottom: 50px;
+            border-style: solid;
+            border-color: #00a8ff;
+            text-align: center;
+        }
+
+        .image {
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+            .image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+
+        .image-title {
+            font-size: 20px;
+            color: #8e8fb5;
+        }
+
+        .slick-initialized .slick-slide {
+            margin: 0 10px;
+        }
+
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            line-height: 1;
+            z-index: 5;
+            transition: all 0.2s linear;
+            background-color: #1e90ff; /* Background color */
+            color: white; /* Text color */
+            border-radius: 5px; /* Make them circular */
+            cursor: pointer;
+        }
+
+        .slick-prev {
+            left: -30px;
+            top: 150px;
+        }
+
+        .slick-next {
+            right: -30px;
+            top: 150px;
+        }
+
+        /* Hover effect for the buttons */
+        .slick-arrow:hover {
+            background-color: #0077cc; /* Change background color on hover */
+        }
+
+        .slick-dots {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 0 20px;
+            list-style-type: none;
+        }
+
+            .slick-dots button {
+                font-size: 0;
+                width: 15px;
+                height: 15px;
+                border-radius: 100rem;
+                background-color: #eee;
+                border: none;
+                outline: none;
+                transition: all 0.2s linear;
+            }
+
+            .slick-dots .slick-active button {
+                background-color: #2cccff;
+            }
+
+        .slick-track {
+            height: 366px;
+            margin: 10px -2px;
+        }
+
+        .ml-auto {
+            left: 10px;
+        }
+
+        .slick-slide {
+            border-top-left-radius: 10px box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+            &:hover
+
+        {
+            transform: scale(1.05); /* Phóng to thẻ khi hover qua */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Tăng độ đục của box-shadow */
+        }
+        }
+        .vertical-div {
+            height:60px;
+            font-size:20px;
+            margin: 5px 20px;
+            padding:10px 15px;
+            &:hover
+
+        {
+            background-color:aliceblue;
+            transform: scale(1.05); /* Phóng to thẻ khi hover qua */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Tăng độ đục của box-shadow */
+        }
+        }
+        .navbar-container a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            margin-bottom: 10px;
+            &:hover
+                {
+                    color: #3498db; /* Màu khi hover lên liên kết */
+                }
+        }
+
+        /*Produc detail*/
+
+        .product {
+            max-width: 800px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px 10px rgba(0,0,0,.2);
+            display: flex;
+        }
+
+        .product-hero {
+            flex: 0 0 45%;
+        }
+
+        .product-content {
+            background: white;
+            flex: 1;
+            padding: 30px 10px 20px 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-price {
+            background: linear-gradient(to bottom, #141E30, #243B55 );
+            flex: 0 0 50px;
+            color: white;
+            writing-mode: vertical-rl;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image {
+            width: 100%;
+            display: block;
+        }
+
+
+        /* Content */
+        body-product {
+            font-family: Roboto;
+            font-size: 16px;
+            padding: 50px;
+            background: linear-gradient(to bottom right, #141E30, #243B55 );
+            min-height:1000px;
+            display: flex;
+            align-items: center; /* vertical axis */
+            justify-content: center; /* horizontal axis */
+        }
+        .product-title {
+            margin-bottom: 20px;
+        }
+
+        .product-heading {
+            font-size: 120%;
+            font-weight: 400;
+            color: #141e30;
+            margin-right: auto;
+        }
+
+        .product-tag {
+            display: flex;
+        }
+
+            .product-tag p {
+                font-size: 10px;
+                text-transform: uppercase;
+                color: white;
+                padding: 2px 7px;
+                border-radius: 100px;
+                margin: 5px 5px 0 0;
+            }
+
+        .product-tag-1, {
+            background-color: #141e30;
+        }
+
+        .product-tag-2 {
+            background-color: #243b55;
+        }
+
+        .product-description {
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        .product-details {
+            display: flex;
+            margin-top: auto;
+        }
+
+        .product-detail {
+            font-weight: 300;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .emoji {
+            font-size: 14px;
+            margin-right: 3px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            setTimeout(switchImage, 3000);
+        }
+        var current = 1;
+        var numIMG = 4;
+        function switchImage() {
+            current++;
+            // Thay thế hình
+            document.images['myimage'].src = '/image/image' + current + '.jpg';
+            // Kiểm tra nếu đã đạt đến hình cuối cùng
+            if (current === numIMG) {
+                // Thực hiện hành động mong muốn sau khi hiển thị hình cuối cùng
+                console.log("Hiển thị hình cuối cùng");
+                // Đặt lại current về 1 để bắt đầu lại từ đầu
+                current = 1;
+            }
+            // Gọi lại hàm setTimeout để chuyển đến hình tiếp theo
+            setTimeout(switchImage, 3000);
+        }
+    </script>
+</head>
+<body>
+    <div class="container" style="top:0px">
+        </div>
+        <header style="height:42px">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:dodgerblue;height:42px;width:100%">
+                <a class="navbar-brand" href="/Home/index">
+                    <img src="/image/home.png" alt="Logo" height="42px" style="background-color: dodgerblue;width:60px">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav" style="background-color:dodgerblue;height:42px;margin-left:-18px">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Xe đạp đường phố
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <li><a class="dropdown-item" href="#">Xe đạp đô thị</a></li>
+                                <li><a class="dropdown-item" href="#">Xe đạp cổ điển</a></li>
+                                <li><a class="dropdown-item" href="#">Xe đạp gấp</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Xe đạp leo núi
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="#">Xe đạp leo núi cơ bản</a></li>
+                                <li><a class="dropdown-item" href="#">Xe đạp leo núi chuyên nghiệp</a></li>
+                                <li><a class="dropdown-item" href="#">Xe đạp leo núi điện</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Xe đạp đua
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <li><a class="dropdown-item" href="#">Xe đạp đua cơ bản</a></li>
+                                <li><a class="dropdown-item" href="#">Xe đạp đua chuyên nghiệp</a></li>
+                                <li><a class="dropdown-item" href="#">Xe đạp đua cao cấp</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Phụ kiện</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="d-flex flex-row align-items-center flex-wrap" action="/Products/index">
+                                @*<label for="Search" class="mx-2 my-1">Search</label>*@
+                                <input type="Search"
+                                       class="form-control w-auto"
+                                       id="Search"
+                                       name="Search"
+                                       value="@ViewBag.Search"
+                                       placeholder="Search" />
+                                <button type="submit" class="btn btn-primary mx-2">Search</button>
+                            </form>
+                        </li>
+                        <li class="nav-item" style="margin-left:250px">
+                            <a class="nav-link" href="/home/sigin">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <img src="~/image/shopping-cart.png" style="height:35px" />
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div id="content" style="margin-top:-25px;background-color:aliceblue">
+                <div class="right-section" style="background-color:dodgerblu">    
+                    @RenderBody()
+                    <div style="clear:both;"></div>
+                </div>
+        </main>
+
+        <footer class="footer" style="background-color:black;color:aliceblue">
+            <div class="row">
+                <div class="col-sm-6 footer-left">
+                    <p>Thông tin doanh nghiệp và liên hệ:</p>
+                    <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
+                    <p>Email: info@company.com</p>
+                    <p>Số điện thoại: 123-456-7890</p>
+                </div>
+                <div class="col-sm-6 footer-right">
+                    <p class="text-muted">Các liên kết:</p>
+                    <p><a href="#">Trang chủ</a></p>
+                    <p><a href="#">Sản phẩm</a></p>
+                    <p><a href="#">Về chúng tôi</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".image-slider").slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true,
+                draggable: false,
+                prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
+                nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            slidesToShow: 3,
+                        },
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            arrows: false,
+                            infinite: false,
+                        },
+                    },
+                ],
+                autoplay: true,
+                autoplaySpeed: 1000,
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

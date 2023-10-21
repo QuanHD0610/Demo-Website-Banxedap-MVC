@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .registration-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #3742fa;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 2px;
+            border: none;
+            cursor: pointer;
+            width: 140px;
+            border-radius: 5px;
+        }
+
+            button:hover {
+                background-color: #0652DD;
+            }
+
+        /* Đổi kiểu của liên kết */
+        a {
+            text-decoration: none;
+            color:white;
+        }
+
+            /* Ẩn gạch dưới của liên kết khi di chuột qua */
+            a:hover {
+                text-decoration: none;
+            }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Đăng ký</h2>
+        <form action="/register" method="post">
+            <label for="name"><b>Tên</b></label>
+            <input type="text" placeholder="Nhập Tên" name="name" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Nhập Email" name="email" required>
+
+            <label for="psw"><b>Mật khẩu</b></label>
+            <input type="password" placeholder="Nhập Mật khẩu" name="psw" required>
+
+            <label for="psw-repeat"><b>Xác nhận Mật khẩu</b></label>
+            <input type="password" placeholder="Nhập Lại Mật khẩu" name="psw-repeat" required>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Đồng ý tạo tài khoản
+            </label>
+            <div class="loginn">
+                <button type="button">Đăng ký</button>
+                <button type="submit"><a href="/home/Sigin">Đăng Nhập</a></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

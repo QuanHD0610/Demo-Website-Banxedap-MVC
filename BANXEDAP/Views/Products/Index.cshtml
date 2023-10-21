@@ -1,0 +1,90 @@
+﻿@model List<BANXEDAP.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@{
+    string iconClass = "";
+    if (ViewBag.IconClass == "fa-sort-desc")
+    {
+        iconClass = "fa-sort-desc";
+    }
+    else
+    {
+        iconClass = "fa-sort-desc";
+    }
+}
+<div class="row" style="min-height:1000px">
+    <div class="col-md-3" style="background-color: #3498db">
+        <div class="navbar-container" style=" position: fixed;">
+            <a href="/Products/index?SortColumn=Id&IconClass=fa-sort-desc&page=1"> <div class="col-12 vertical-div">Id Giảm</div></a>
+            <a href="/Products/index?SortColumn=Id&IconClass=fa-sort-asc&page=1"> <div class="col-12 vertical-div">Id Tăng</div></a>
+            <a href="/Products/index?SortColumn=Name&IconClass=fa-sort-desc&page=1"><div class="col-12 vertical-div">Sắp theo tên Z->A</div></a>
+            <a href="/Products/index?SortColumn=Name&IconClass=fa-sort-asc&page=1"><div class="col-12 vertical-div">Sắp theo tên A->Z</div></a>
+            <a href="/Products/index?SortColumn=Price&IconClass=fa-sort-desc&page=1"><div class="col-12 vertical-div">Sắp xếp theo Giá Giảm</div></a>
+            <a href="/Products/index?SortColumn=Price&IconClass=fa-sort-asc&page=1"><div class="col-12 vertical-div">Sắp xếp theo Giá Tăng</div></a>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div>
+            @foreach (var item in Model)
+            {
+                <a href="/Products/Detail/@item.Id">
+                    <div class="card1" style="margin:10px;float:left">
+                        <img src="@item.Image" class="card-img-top1" alt="Product Image">
+                        <div class="card-body1">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">@item.Price</p>
+                            <p class="card-text">@item.Detail</p>
+                        </div>
+                        <div class="add-cart">
+                            <button class="btn btn-info"><a href="#">Add cart</a></button>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+    <div class="next-back" style="margin:10px 20px">
+        @{
+            int PrevPage = ViewBag.Page - 1;
+            if (PrevPage <= 0)
+            {
+                PrevPage = 1;
+            }
+            int NextPage = ViewBag.Page + 1;
+            if (NextPage > ViewBag.NoOfPages)
+            {
+                NextPage = ViewBag.NoOfPages;
+            }
+        }
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="page-link" href="/Products/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@PrevPage"> PrevPage</a>
+
+            </li>
+            @for (int i = 0; i < ViewBag.NoOfPages; i++)
+            {
+                if (i + 1 == ViewBag.Page)
+                {
+                    <li class="page-item active">
+                        <a class="page-link" href="/Products/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@(i+1)"> @(i + 1)</a>
+
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="/Products/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@(i+1)"> @(i + 1)</a>
+
+                    </li>
+                }
+            }
+            <li class="page-item">
+                <a class="page-link" href="/Products/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@NextPage"> Next</a>
+
+            </li>
+        </ul>
+    </div>
+

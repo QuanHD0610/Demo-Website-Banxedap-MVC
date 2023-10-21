@@ -1,0 +1,64 @@
+﻿@model List<BANXEDAP.Models.Product>
+
+@{
+    // Khai báo danh sách department
+    List<BANXEDAP.Models.Deparment> departments = new List<BANXEDAP.Models.Deparment>();
+}
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@foreach (var i in Model.Where(x => x.Id <= 3))
+{
+    departments.Add(new BANXEDAP.Models.Deparment { Id = i.DepId, Name = i.Name });
+}
+
+<div class="row p-6" style="margin-bottom:0px">
+    <div class="col-md-12 text-center">
+        <img name="myimage" class="myimage img-fluid" src="/image/image1.jpg" alt="Banner" style="height:420px;width:100%">
+    </div>
+</div>
+<h2 style="text-align: center; margin-top: 30px; text-transform: uppercase; font-weight: bold;">Danh sách sản phẩm nổi bật</h2>
+<div class="image-slider">
+    @foreach (var product in Model.Where(x => x.Price > 2500000).Take(5))
+    {
+        <a href="/Products/Detail/@product.Id">
+            <div class="image-item">
+                <div class="image">
+                    <img src="@product.Image" alt="" />
+                </div>
+                <h3 class="image-title">@product.Name</h3>
+            </div>
+            </a>
+     }
+    </div>
+
+<h2 style="text-align:center;margin-top:100px;margin-bottom:-200px">Danh sách các sản phẩm</h2>
+<br />
+<div class="container1">
+    @foreach (var department in departments)
+    {
+        <h3 style="margin-top:150px;font-size:30px;color:mediumblue; border: 2px solid double" class="tieude">@department.Name</h3>
+        <div class="list-container">
+            @foreach (var item in Model.Where(x => x.DepId == department.Id))
+            {
+                <a href="/Products/Detail/@item.Id">
+                    <div class="card1">
+                        <img src="@item.Image" class="card-img-top1" alt="Product Image">
+                        <div class="card-body1">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">@item.Price</p>
+                            <p class="card-text">@item.Detail</p>
+                        </div>
+                        <div class="add-cart">
+                            <button class="btn btn-info"><a href="#">Add cart</a></button>
+                        </div>
+                    </div>
+                    </a>
+                    }
+            </div>
+    }
+</div>
+

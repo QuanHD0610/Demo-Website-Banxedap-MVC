@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BANXEDAP", "BANXEDAP\BANXEDAP.csproj", "{0938E598-24BF-4342-AC66-1D37A5E1F8E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0938E598-24BF-4342-AC66-1D37A5E1F8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0938E598-24BF-4342-AC66-1D37A5E1F8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0938E598-24BF-4342-AC66-1D37A5E1F8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0938E598-24BF-4342-AC66-1D37A5E1F8E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61BBF12C-CFCF-425B-A513-EF8C59B27F83}
+	EndGlobalSection
+EndGlobal
